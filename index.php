@@ -19,7 +19,7 @@
         <header>Realtime Chat App</header>
 
         <form action="#" enctype="multipart/form-data">
-          <div class="error-txt">This is an error message!</div>
+          <div class="error-txt"></div>
           <div class="name-details">
             <div class="field input">
               <label>First Name</label>

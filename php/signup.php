@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include_once "config.php";
 
     $fname = mysqli_real_escape_string($conn, $_POST['fname']);
@@ -32,6 +33,37 @@
 
                     // check if user upladed a file with a valid extension
                     if (in_array($img_ext, $extensions) === true) {
+                        $time = time(); // returns current time
+                                        // we will rename all images with current time
+                                        // this makes us have a unique name all the time
+
+
+                        // lets move the user uploaded img to our particulr folder
+                        $new_img_name = $time.$img_name;
+
+                        if (move_uploaded_file($tmp_name, "images/".$new_img_name)) {
+                            $status = "Active now"; // once the user signed up then his status willbe active now
+                            $random_id = rand(time(), 10000000);
+
+                            // lets insert all user data in table
+                            $sql2 = mysqli_query($conn, "INSERT INTO users (unique_id, fname, lname, email, password, img, status)
+                                                VALUES ('{$random_id}', '{$fname}', '{$lname}', '{$email}', '{$password}', '{$new_img_name}', '{$status}')");
+
+                            if ($sql2) {
+                                $sql3 = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}' ");
+
+                                if (mysqli_num_rows($sql3) > 0) {
+                                    $row = mysqli_fetch_assoc($sql3);
+                                    $_SESSION['unique_id'] = $row['unique_id']; // using this session  we used user unique_id in other php file
+
+                                    echo "Success";
+                                }
+                            } else {
+                                echo "Something went wrong";
+                            }
+                        }
+                        
+
 
                     } else {
                         echo "Please select a valid image file! - png, jpeg, jpg";
