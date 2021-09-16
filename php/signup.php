@@ -46,7 +46,7 @@
                             $random_id = rand(time(), 10000000);
 
                             // lets insert all user data in table
-                            $sql2 = mysqli_query($conn, "INSERT INTO users (unique_id, fname, lname, email, password, img, status)
+                            $sql2 = mysqli_query($conn, "INSERT INTO users (unique_id, fname, lname, email, u_password, img, u_status)
                                                 VALUES ('{$random_id}', '{$fname}', '{$lname}', '{$email}', '{$password}', '{$new_img_name}', '{$status}')");
 
                             if ($sql2) {
