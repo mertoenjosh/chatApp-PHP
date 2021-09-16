@@ -23,12 +23,12 @@
 
           <div class="field input">
             <label>Email Address</label>
-            <input type="email" placeholder="Enter Your Email" />
+            <input name="email" type="email" placeholder="Enter Your Email" />
           </div>
 
           <div class="field input">
             <label>Password</label>
-            <input type="password" placeholder="Enter your password" />
+            <input name="password" type="password" placeholder="Enter your password" />
             <i class="fas fa-eye"></i>
           </div>
 
