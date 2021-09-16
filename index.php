@@ -18,7 +18,7 @@
       <section class="form signup">
         <header>Realtime Chat App</header>
 
-        <form action="#" enctype="multipart/form-data">
+        <form action="#" enctype="multipart/form-data" autocomplete="off">
           <div class="error-txt"></div>
           <div class="name-details">
             <div class="field input">
@@ -53,7 +53,7 @@
           </div>
         </form>
 
-        <div class="link">Already signed up? <a href="#">Login now</a></div>
+        <div class="link">Already signed up? <a href="login.php">Login now</a></div>
       </section>
     </div>
   </body>

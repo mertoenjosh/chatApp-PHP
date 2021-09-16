@@ -11,6 +11,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
     <script src="javascript/pass-show-hide.js" defer></script>
+    <script src="javascript/login.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
@@ -18,7 +19,7 @@
         <header>Realtime Chat App</header>
 
         <form action="#">
-          <div class="error-txt">This is an error message!</div>
+          <div class="error-txt"></div>
 
           <div class="field input">
             <label>Email Address</label>
@@ -36,7 +37,7 @@
           </div>
         </form>
 
-        <div class="link">Not yet signed up? <a href="#">Signup now</a></div>
+        <div class="link">Not yet signed up? <a href="index.php">Signup now</a></div>
       </section>
     </div>
   </body>
