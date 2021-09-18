@@ -10,8 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
-    <script src="javascript/pass-show-hide.js" defer></script>
-    <script src="javascript/signup.js" defer></script>
+ 
   </head>
   <body>
     <div class="wrapper">
@@ -56,5 +55,8 @@
         <div class="link">Already signed up? <a href="login.php">Login now</a></div>
       </section>
     </div>
+
+    <script src="javascript/pass-show-hide.js" defer></script>
+    <script src="javascript/signup.js" defer></script>
   </body>
 </html>

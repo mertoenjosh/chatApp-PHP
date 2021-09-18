@@ -10,12 +10,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
-    <script src="javascript/users.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
       <section class="users">
         <header>
+
+        <?php
+
+        ?>
+
           <div class="content">
             <img src="logo2.png" alt="" />
             <div class="details">
@@ -106,5 +110,8 @@
         </div>
       </section>
     </div>
+    
+    <script src="javascript/users.js" defer></script>
+
   </body>
 </html>
