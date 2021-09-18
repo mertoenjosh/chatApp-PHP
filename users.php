@@ -41,6 +41,7 @@
         </div>
 
         <div class="users-list">
+        <!-- 
           <a href="#">
             <div class="content">
               <img src="logo2.png" alt="" />
@@ -50,67 +51,9 @@
               </div>
             </div>
             <div class="status-dot"><i class="fas fa-circle"></i></div>
-          </a>
-          <a href="#">
-            <div class="content">
-              <img src="logo2.png" alt="" />
-              <div class="details">
-                <span>Martin Thuo</span>
-                <p>This is a test message</p>
-              </div>
-            </div>
-            <div class="status-dot"><i class="fas fa-circle"></i></div>
-          </a>
-          <a href="#">
-            <div class="content">
-              <img src="logo2.png" alt="" />
-              <div class="details">
-                <span>Martin Thuo</span>
-                <p>This is a test message</p>
-              </div>
-            </div>
-            <div class="status-dot"><i class="fas fa-circle"></i></div>
-          </a>
-          <a href="#">
-            <div class="content">
-              <img src="logo2.png" alt="" />
-              <div class="details">
-                <span>Martin Thuo</span>
-                <p>This is a test message</p>
-              </div>
-            </div>
-            <div class="status-dot"><i class="fas fa-circle"></i></div>
-          </a>
-          <a href="#">
-            <div class="content">
-              <img src="logo2.png" alt="" />
-              <div class="details">
-                <span>Martin Thuo</span>
-                <p>This is a test message</p>
-              </div>
-            </div>
-            <div class="status-dot"><i class="fas fa-circle"></i></div>
-          </a>
-          <a href="#">
-            <div class="content">
-              <img src="logo2.png" alt="" />
-              <div class="details">
-                <span>Martin Thuo</span>
-                <p>This is a test message</p>
-              </div>
-            </div>
-            <div class="status-dot"><i class="fas fa-circle"></i></div>
-          </a>
-          <a href="#">
-            <div class="content">
-              <img src="logo2.png" alt="" />
-              <div class="details">
-                <span>Martin Thuo</span>
-                <p>This is a test message</p>
-              </div>
-            </div>
-            <div class="status-dot"><i class="fas fa-circle"></i></div>
-          </a>
+          </a> 
+        -->
+ 
         </div>
       </section>
     </div>
