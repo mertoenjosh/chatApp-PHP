@@ -27,6 +27,14 @@ sendBtn.onclick = () => {
   xhr.send(formData); // sending the form data to php
 };
 
+chatBox.onmouseenter = () => {
+  chatBox.classList.add('active');
+};
+
+chatBox.onmouseleave = () => {
+  chatBox.classList.remove('active');
+};
+
 setInterval(() => {
   // start AJAX
 
@@ -38,7 +46,10 @@ setInterval(() => {
       if (xhr.status === 200) {
         let data = xhr.response;
         chatBox.innerHTML = data;
-        scrollToBottom();
+        if (!chatBox.classList.contains('active')) {
+          // will only scrol if class active is not contained
+          scrollToBottom();
+        }
       }
     }
   };
