@@ -34,7 +34,8 @@
         </header>
 
         <div class="chat-box">
-          <div class="chat outgoing"> 
+
+          <!-- <div class="chat outgoing"> 
             <div class="details">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit quo.
@@ -49,56 +50,8 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit quo.
               </p>
             </div>
-          </div>
-          <div class="chat outgoing">
-            <div class="details">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit quo.
-              </p>
-            </div>
-          </div>
-
-          <div class="chat incoming">
-            <img src="logo2.png" alt="" />
-            <div class="details">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit quo.
-              </p>
-            </div>
-          </div>
-          <div class="chat outgoing">
-            <div class="details">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit quo.
-              </p>
-            </div>
-          </div>
-
-          <div class="chat incoming">
-            <img src="logo2.png" alt="" />
-            <div class="details">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit quo.
-              </p>
-            </div>
-          </div>
-          <div class="chat outgoing">
-            <div class="details">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit quo.
-              </p>
-            </div>
-          </div>
-
-          <div class="chat incoming">
-            <img src="logo2.png" alt="" />
-            <div class="details">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit quo.
-              </p>
-            </div>
-          </div>
-        </div>
+          </div> -->
+         
         <form action="#" class="typing-area" autocomplete="off">
           <input type="text" name="outgoing_id" value="<?php echo $_SESSION['unique_id']; ?>" hidden>
           <input type="text" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
