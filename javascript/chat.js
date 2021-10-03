@@ -5,7 +5,7 @@ const form = document.querySelector('.typing-area'),
   sendBtn = form.querySelector('button');
 
 form.onsubmit = e => {
-  // e.preventDefault(); // prevent the ffault behaviour of submitting a form
+  e.preventDefault(); // prevent the ffault behaviour of submitting a form
 };
 
 sendBtn.onclick = () => {
@@ -15,6 +15,7 @@ sendBtn.onclick = () => {
   xhr.onload = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
+        inputField.value = ''; // make input field blank once message is inserted in the database
       }
     }
   };
@@ -23,3 +24,25 @@ sendBtn.onclick = () => {
   let formData = new FormData(form); // create a new form data object
   xhr.send(formData); // sending the form data to php
 };
+
+setInterval(() => {
+  // start AJAX
+
+  let xhr = new XMLHttpRequest();
+
+  xhr.open('GET', 'php/get-chat.php', true);
+  xhr.onload = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        let data = xhr.response;
+
+        if (!searchBar.classList.contains('active')) {
+          userList.innerHTML = data;
+        }
+      }
+    }
+  };
+
+  let formData = new FormData(form); // create a new form data object
+  xhr.send(formData);
+}, 500); // function will run frequently after 500ms

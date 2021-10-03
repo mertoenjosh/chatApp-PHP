@@ -12,8 +12,10 @@
     <div class="wrapper">
       <section class="chat-area">
         <header>
+
         <?php
           include_once "php/config.php";
+
           $user_id = mysqli_real_escape_string($conn, $_GET['user_id']);
 
           $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$user_id}");
@@ -21,7 +23,6 @@
           if (mysqli_num_rows($sql) > 0) {
             $row = mysqli_fetch_assoc($sql);
           }
-
         ?>
 
           <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
@@ -33,7 +34,7 @@
         </header>
 
         <div class="chat-box">
-          <div class="chat outgoing">
+          <div class="chat outgoing"> 
             <div class="details">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit quo.
@@ -98,7 +99,7 @@
             </div>
           </div>
         </div>
-        <form action="post" class="typing-area">
+        <form action="#" class="typing-area" autocomplete="off">
           <input type="text" name="outgoing_id" value="<?php echo $_SESSION['unique_id']; ?>" hidden>
           <input type="text" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
           <input type="text" name="message" class="input-field" type="text" placeholder="Type a message here..." />
