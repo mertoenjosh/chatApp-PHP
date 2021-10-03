@@ -31,7 +31,7 @@
               <p><?php echo $row['u_status'] ?></p>
             </div>
           </div>
-          <a href="#" class="logout">Logout</a>
+          <a href="php/logout.php?logout_id=<?php echo $row['unique_id']?>" class="logout">Logout</a>
         </header>
 
         <div class="search">
