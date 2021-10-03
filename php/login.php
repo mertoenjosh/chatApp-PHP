@@ -1,4 +1,12 @@
 <?php
+  session_start();
+
+  if(isset($_SESSION['unique_id'])){ // if user is logged in
+    header("location: users.php");
+  }
+?>
+
+<?php
     session_start();
     include_once "config.php";
 
