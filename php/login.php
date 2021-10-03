@@ -1,4 +1,12 @@
 <?php
+  session_start();
+
+  if(isset($_SESSION['unique_id'])){ // if user is logged in
+    header("location: users.php");
+  }
+?>
+
+<?php
     session_start();
     include_once "config.php";
 
@@ -11,10 +19,16 @@
 
         if (mysqli_num_rows($sql) > 0) {
             $row = mysqli_fetch_assoc($sql);
+            $status = "Active now";
 
-            $_SESSION['unique_id'] = $row['unique_id']; // using this session  we used user unique_id in other php file
+            // Update user status after login
+            $sql2 = mysqli_query($conn, "UPDATE users SET u_status = '{$status}' WHERE unique_id = '{$row['unique_id']}'");
 
-            echo "Success";
+            if ($sql2) {
+                $_SESSION['unique_id'] = $row['unique_id']; // using this session  we used user unique_id in other php file
+
+                echo "Success";
+            }
 
         } else {
             echo "Email or Password is incorrect!";
